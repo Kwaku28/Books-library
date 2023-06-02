@@ -43,18 +43,22 @@ This is a mobile web search application integrated with Google books API to sear
 ### Tech Stack <a name="tech-stack"></a>
 
 - **React**
+- **Redux**
+- **JavaScript**
+- **CSS**
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-- **[create react app]**
-- **[set up linters]**
-- **[Components]**
-- **[Connect React and Redux]**
-- **[Add reducers and actions]**
-- **[useSelector and useDispatch]**
-- **[Connect API]**
+- **create react app**
+- **set up linters**
+- **Components**
+- **Connect React and Redux**
+- **Add reducers and actions**
+- **useSelector and useDispatch**
+- **Connect API**
+- **Styling**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -152,7 +156,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Styling]**
+- [ ] **Complete Website**
 
 <!-- CONTRIBUTING -->
 
