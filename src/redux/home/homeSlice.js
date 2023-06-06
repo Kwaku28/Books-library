@@ -1,4 +1,5 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice, isRejectedWithValue } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 const initialState = {
   books: [],
@@ -13,9 +14,12 @@ const apiKey = 'AIzaSyAkrEYBYl6xrkA2iD8hpooqC27MRhgkL8U';
 export const fetchBooks = createAsyncThunk(
   'books/fetchBooks',
   async (search) => {
-    const res = await fetch(`${URL}${search}&key=${apiKey}`);
-    const response = await res.json();
-    return response.items;
+    try {
+      const response = await axios.get(`${URL}${search}&key=${apiKey}&maxResults=40`);
+      return response.data.items;
+    } catch (error) {
+      return isRejectedWithValue(error.response.data.items);
+    }
   },
 );
 
